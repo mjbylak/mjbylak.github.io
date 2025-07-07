@@ -1,0 +1,24 @@
+# Node.js
+node_modules/
+
+# Dependencies
+npm-debug.log
+yarn-error.log
+
+# Build output
+dist/
+build/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+logs/
+*.log
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
