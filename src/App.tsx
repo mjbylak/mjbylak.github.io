@@ -1,31 +1,28 @@
-
-import galaxyMitchell from './assets/GalaxyMe.png'
-import './App.css'
-import Navbar from './components/Navbar'
-
-
-function AboutMe() {
-  return (
-    <>
-      <h2>Bio</h2>
-      <p>
-          Mitchell Bylak completed his Bachelor's of Science in Computer Science from the University of Arkansas in December of 2023. He has interned at JB Hunt Transport Inc. since his second year in college, served as a Senior Project Lead with the McMillon Studio of Innovation for four separate projects, each one with a different company, and conducted research and development on various hardware and software projects with the National Center for Reliable Electric Power Transmission (NCREPT). At the start of 2024, Mitchell had the incredible opportunity to participate in a three part study abroad in London, Berlin, and Rome, so he unfortunately had to discontinue his positions with NCREPT and JB Hunt.
-      </p>
-    </>
-  )
-}
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Portfolio from './pages/Portfolio';
+import Music from './pages/Music';
+import Handicraft from './pages/Handicraft';
 
 function App() {
-
-  return (
-    <>
-    <Navbar />
-    <img src={galaxyMitchell} className="galaxy-mitchell" alt="Galaxy Mitchell" style={{ width: '50%', height: 'auto', verticalAlign: 'middle', justifyContent: 'center'}} />
-    <div>
-      <AboutMe />
-    </div>
-    </>
-  )
+    return (
+        <>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/music" element={<Music />} />
+                <Route path="/handicraft" element={<Handicraft />} />
+            </Routes>
+        </>
+    );
 }
 
-export default App 
+export default App;
