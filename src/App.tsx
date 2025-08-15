@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import galaxyMitchell from './assets/GalaxyMe.png'
 import './App.css'
+import Navbar from './components/Navbar'
 
-function App() {
-  const [count, setCount] = useState(0)
 
+function AboutMe() {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+      <h2>Bio</h2>
+      <p>
+          Mitchell Bylak completed his Bachelor's of Science in Computer Science from the University of Arkansas in December of 2023. He has interned at JB Hunt Transport Inc. since his second year in college, served as a Senior Project Lead with the McMillon Studio of Innovation for four separate projects, each one with a different company, and conducted research and development on various hardware and software projects with the National Center for Reliable Electric Power Transmission (NCREPT). At the start of 2024, Mitchell had the incredible opportunity to participate in a three part study abroad in London, Berlin, and Rome, so he unfortunately had to discontinue his positions with NCREPT and JB Hunt.
       </p>
     </>
   )
 }
 
-export default App
+function App() {
+
+  return (
+    <>
+    <Navbar />
+    <img src={galaxyMitchell} className="galaxy-mitchell" alt="Galaxy Mitchell" style={{ width: '50%', height: 'auto', verticalAlign: 'middle', justifyContent: 'center'}} />
+    <div>
+      <AboutMe />
+    </div>
+    </>
+  )
+}
+
+export default App 
