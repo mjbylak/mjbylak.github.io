@@ -1,4 +1,3 @@
-import React from 'react';
 import galaxyMitchell from '../assets/galaxyMe.png';
 
 const Home = () => {
